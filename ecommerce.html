@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website Documentation</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <h2>Documentation</h2>
+        <a href="#intro">Introduction</a>
+        <a href="#overview">System Overview</a>
+        <a href="#functional">Functional Requirements</a>
+        <a href="#nonfunctional">Non-Functional Requirements</a>
+        <a href="#usecase">Use Case Diagram</a>
+        <a href="#architecture">System Architecture</a>
+        <a href="#er">ER Diagram</a>
+        <a href="#api">API Endpoints</a>
+        <a href="#deploy">Deployment Considerations</a>
+        <a href="#conclusion">Conclusion</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <section id="intro">
+            <h2>1. Introduction</h2>
+            <p>
+                This documentation provides details of an E-Commerce Website built using
+                React, JavaScript, Tailwind CSS, Express.js, Cloudinary and MongoDB.
+                The application allows users to browse products, manage a cart, and securely checkout.
+            </p>
+        </section>
+
+        <section id="overview">
+            <h2>2. System Overview</h2>
+            <p>
+                The E-Commerce platform consists of three layers:
+            </p>
+            <ul>
+                <li><b>Frontend:</b> React, JavaScript and Tailwind CSS.</li>
+                <li><b>Backend:</b> Express.js handles RESTful APIs and authentication.</li>
+                <li><b>Database:</b> MongoDB stores users, products, and orders. Cloudinary stores product images.</li>
+            </ul>
+        </section>
+
+        <section id="functional">
+            <h2>3. Functional Requirements</h2>
+            <ul>
+                <li>User registration and login with authentication.</li>
+                <li>Product browsing and searching.</li>
+                <li>Shopping cart management.</li>
+                <li>Order placement and checkout.</li>
+                <li>Payment integration.</li>
+                <li>Admin panel for managing users, products, and orders.</li>
+            </ul>
+        </section>
+
+        <section id="nonfunctional">
+            <h2>4. Non-Functional Requirements</h2>
+            <ul>
+                <li>Performance: load within 3 seconds.</li>
+                <li>Security: hashed passwords, secure sessions.</li>
+                <li>Scalability: handle growing concurrent users.</li>
+                <li>Availability: target 99.9% uptime.</li>
+            </ul>
+        </section>
+
+        <section id="usecase">
+            <h2>5. Use Case Diagram</h2>
+            <p>Diagram illustrating interactions between Customer, Admin, and Payment Gateway.</p>
+            <img src="/assets/ecommerce_use_case.png" alt="Use Case Diagram" width="800">
+        </section>
+
+        <section id="architecture">
+            <h2>6. System Architecture</h2>
+            <p>High-level architecture of client, server, and database.</p>
+            <img src="/assets/ecommerce_system_architecture.png" alt="System Architecture Diagram" width="800">
+        </section>
+
+        <section id="er">
+            <h2>7. ER Diagram</h2>
+            <p>Entity-Relationship diagram of Users, Products, Orders, and Payments.</p>
+            <img src="/assets/ERD.png" alt="ER Diagram" width="800">
+        </section>
+
+        <section id="api">
+            <h2>8. API Endpoints</h2>
+            <pre>
+                Authentication:
+                  POST /api/auth/register
+                  POST /api/auth/login
+
+                Products:
+                  GET /api/products
+                  GET /api/products/:id
+                  POST /api/products (admin)
+                  PUT /api/products/:id (admin)
+                  DELETE /api/products/:id (admin)
+
+                Cart:
+                  GET /api/cart
+                  POST /api/cart/items
+                  PUT /api/cart/items/:itemId
+                  DELETE /api/cart/items/:itemId
+
+                Orders:
+                  POST /api/orders
+                  GET /api/orders/:id
+                  GET /api/orders (admin)
+
+                Payments:
+                  POST /api/payments/intent
+                  POST /api/payments/webhook
+            </pre>
+        </section>
+
+        <section id="deploy">
+            <h2>9. Deployment Considerations</h2>
+            <ul>
+                <li>Use environment variables for secrets (DB URI, JWT, API keys).</li>
+                <li>Separate staging and production environments.</li>
+                <li>Enable HTTPS and secure cookies.</li>
+                <li>Implement CI/CD for automated deployment.</li>
+            </ul>
+        </section>
+
+        <section id="conclusion">
+            <h2>10. Conclusion</h2>
+            <p>
+                This documentation outlines an E-Commerce system using React, Express.js, and MongoDB.
+                It is scalable, secure, and designed for a seamless shopping experience with robust
+                administrative controls.
+            </p>
+        </section>
+    </div>
+</body>
+
+</html>

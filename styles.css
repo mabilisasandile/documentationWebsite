@@ -4,6 +4,10 @@ body {
     display: flex;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Sidebar */
 .sidebar {
     width: 250px;

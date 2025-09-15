@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Listing App Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="movies.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Movie Listing App Documentation</h1>
+            <p class="description">View the documentation for the Movie Listing App</p>
+        </header>
+        
+        <div class="controls">
+            <button id="open-pdf"><i class="fas fa-file-pdf"></i> Open Documentation</button>
+        </div>
+        
+        <div class="viewer-container">
+            <div id="pdf-status">
+                <div class="no-pdf-message">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Movie Listing App Documentation</h3>
+                    <p>Click the "Open Documentation" button to view the PDF documentation</p>
+                    <p>If the PDF doesn't open automatically, please check the console for errors</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="status-message" class="status-message" style="display: none;"></div>
+    </div>
+    
+    <footer>
+        <p>Movie Listing App &copy; 2023</p>
+    </footer>
+
+    <script src="movies.js"></script>
+</body>
+</html>

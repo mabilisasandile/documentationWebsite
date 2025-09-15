@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer - Local Assets</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="pdfViewer.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Documentation Viewer - Project Folder</h1>
+            <p class="description">View Documentations</p>
+        </header>
+        
+        <div class="controls">
+            <div class="file-controls">
+                <select id="pdf-selector">
+                    <option value="">Select a Documentation</option>
+                    <option value="assets/documents/Movie_Listing_App_Documentation.pdf">Movie Listing App</option>
+                    <option value="assets/sample2.pdf">E-Commerce App</option>
+                    <option value="assets/guide.pdf">Campus Smart App</option>
+                    <option value="assets/manual.pdf">LMS Web App</option>
+                </select>
+                <button id="download" class="download-btn" disabled><i class="fas fa-download"></i> Download</button>
+            </div>
+            <div class="view-controls">
+                <button id="zoom-in"><i class="fas fa-search-plus"></i> Zoom In</button>
+                <button id="zoom-out"><i class="fas fa-search-minus"></i> Zoom Out</button>
+            </div>
+        </div>
+        
+        <div class="viewer-container">
+            <div id="pdf-container">
+                <div class="no-pdf-message">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>No PDF Document Selected</h3>
+                    <p>Please select a PDF file from the dropdown</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="navigation">
+            <button id="prev"><i class="fas fa-arrow-left"></i> Previous</button>
+            <span class="page-info">Page: <span id="current-page">0</span> / <span id="total-pages">0</span></span>
+            <button id="next">Next <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Created with PDF.js | &copy; 2025 PDF Viewer</p>
+    </footer>
+
+    <!-- PDF.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script src="pdfViewer.js"></script>
+</body>
+</html>
